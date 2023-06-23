@@ -7,10 +7,9 @@ import org.openqa.selenium.support.PageFactory;
 
 public class BasePage {
 
-    public static WebDriver driver;
+    protected WebDriver driver;
 
-    public BasePage() {
-        driver = new ChromeDriver();
-        driver.get("https://viaporttrans.com/");
+    public BasePage(WebDriver driver) {
+        this.driver = driver;
     }
 }

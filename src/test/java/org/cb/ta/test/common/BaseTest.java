@@ -16,7 +16,7 @@ import java.time.Duration;
 import java.util.Set;
 
 public class BaseTest {
-    protected WebDriver driver=Driver.getDriver();
+    protected WebDriver driver;
     protected WebDriverWait webDriverWait;
     protected Actions action;
     protected TestListener listener;
@@ -24,19 +24,10 @@ public class BaseTest {
     protected Set<String> handles;
     protected JavascriptExecutor jsx;
 
-    @BeforeClass(enabled = false)
-    public void init() {
+    public BaseTest() {
+        this.driver = new ChromeDriver();
         driver.get("https://viaporttrans.com/");
-        action = new Actions(driver);
-        webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        jsx = (JavascriptExecutor) driver;
-
-    }
-
-
-
-    @AfterClass(enabled = true)
-    public void afterClass() throws InterruptedException {
-        driver.quit();
+        this.webDriverWait =new WebDriverWait(driver,Duration.ofSeconds(3));
+        this.action = new Actions(driver);
     }
 }

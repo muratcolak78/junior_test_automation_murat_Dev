@@ -7,7 +7,7 @@
     <test name="Test 2"> <!--parallel="true" thread-count="5"-->
         <groups>
             <run>
-                <include name="smoke"/>
+                <include name="header"/>
             </run>
         </groups>
         <packages>

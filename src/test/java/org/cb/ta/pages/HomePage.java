@@ -17,13 +17,11 @@ import org.testng.annotations.Test;
 
 @Getter
 public class HomePage extends BasePage {
-    private Actions actions = new Actions(BasePage.driver);
 
-    public HomePage() {
-
+    public HomePage(WebDriver driver) {
+        super(driver);
         PageFactory.initElements(driver, this);
     }
-
 
     @FindBy(xpath = "//*[@id=\"menu-main-menu\"]/li[2]/a")
     private WebElement vehicleFleet;
