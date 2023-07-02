@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <suite name="Suite 1">
-
     <Listeners>
-        <Listener class-name="org.cb.ta.common.TestListener"/>
+        <Listener class-name="org.cb.ta.test.common.TestListener"/>
     </Listeners>
     <test name="Test 2"> <!--parallel="true" thread-count="5"-->
         <groups>

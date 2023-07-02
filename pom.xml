@@ -52,7 +52,12 @@
             <version>1.18.28</version>
             <scope>test</scope>
         </dependency>
-
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>5.0.9</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
