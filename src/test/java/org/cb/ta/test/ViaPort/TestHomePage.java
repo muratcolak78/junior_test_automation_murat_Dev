@@ -23,8 +23,8 @@ public class TestHomePage extends BaseTest {
 
     @BeforeMethod
     public void beforeMethod() {
-
         home.getHomePage().click();
+
     }
 
     @AfterMethod
@@ -114,12 +114,12 @@ public class TestHomePage extends BaseTest {
     public void Case_Homepage_0020_Slider_FirstSlideLeft() {
         for (int i = 0; i < 3; i++) {
             home.getLeftArrow().click();
-            webDriverWait.until(ExpectedConditions.visibilityOf(home.getLeftArrow()));
+            //webDriverWait.until(ExpectedConditions.visibilityOf(home.getLeftArrow()));
             Assert.assertTrue(home.getLeftArrow().isEnabled());
         }
     }
 
-    @Test(groups = {"slide"}, priority = 20, enabled = true)
+    @Test(groups = {"slide"}, priority = 30, enabled = true)
     public void Case_Homepage_0030_SliderLeft() {
 
         action.moveToElement(home.getLeftArrow()).build().perform();
@@ -127,16 +127,17 @@ public class TestHomePage extends BaseTest {
         Assert.assertTrue(home.getLeftArrow().isDisplayed());
     }
 
-    @Test(groups = {"slide"}, priority = 30, enabled = true)
-    public void Case_Homepage_0030_SliderRight() {
+    @Test(groups = {"slide"}, priority = 31, enabled = true)
+    public void Case_Homepage_0031_SliderRight() {
         action.moveToElement(home.getRigthArrow()).build().perform();
         webDriverWait.until(ExpectedConditions.visibilityOf(home.getRigthArrow()));
         Assert.assertTrue(home.getRigthArrow().isDisplayed());
 
     }
 
-    @Test(groups = {"slide"}, priority = 73)
-    public void Case_71_FirstGetAQuoteButtons() {
+    @Test(groups = {"slide"}, priority = 32)
+    public void Case_32_FirstGetAQuoteButtons() {
+        home.getHomePage().click();
         webDriverWait.until(ExpectedConditions.visibilityOf(home.getGetAQuote()));
         home.getGetAQuote().click();
         Assert.assertTrue(driver.getCurrentUrl().equals("https://viaporttrans.com/contact-us/"));
@@ -144,9 +145,10 @@ public class TestHomePage extends BaseTest {
 
     }
 
-    @Test(groups = {"slide"}, priority = 72)
-    public void Case_72_SecondGetAQuoteButtons() {
-
+    @Test(groups = {"slide"}, priority = 33)
+    public void Case_33_SecondGetAQuoteButtons() {
+        home.getHomePage().click();
+        //webDriverWait.until(ExpectedConditions.visibilityOf(home.getGetAQuote2()));
         action.moveToElement(home.getLeftArrow()).build().perform();
         home.getLeftArrow().click();
         webDriverWait.until(ExpectedConditions.visibilityOf(home.getGetAQuote2()));
@@ -158,8 +160,9 @@ public class TestHomePage extends BaseTest {
 
     }
 
-    @Test(groups = {"slide"}, priority = 71)
-    public void Case_73_ThirdGetAQuoteButtons() {
+    @Test(groups = {"slide"}, priority = 34)
+    public void Case_34_ThirdGetAQuoteButtons() {
+        home.getHomePage().click();
         action.moveToElement(home.getRigthArrow()).build().perform();
         home.getRigthArrow().click();
         webDriverWait.until(ExpectedConditions.visibilityOf(home.getGetAQuote3()));
@@ -187,6 +190,7 @@ public class TestHomePage extends BaseTest {
 
     @Test(groups = {"Main"}, priority = 62)
     public void Case_0062_Other_Service_Pages() {
+        home.getHomePage().click();
         home.getReadmore2().click();
         Assert.assertTrue(driver.getCurrentUrl().equals("https://viaporttrans.com/logistic-2/"));
 
@@ -194,18 +198,21 @@ public class TestHomePage extends BaseTest {
 
     @Test(groups = {"Main"}, priority = 63)
     public void Case_0063_Other_Service_Pages() {
+        home.getHomePage().click();
         home.getReadmore3().click();
         Assert.assertTrue(driver.getCurrentUrl().equals("https://viaporttrans.com/transport/"));
     }
 
     @Test(groups = {"Main"}, priority = 80)
     public void Case_80_Second_Contact_Us_Button() {
+        home.getHomePage().click();
         home.getContactUs2().click();
         Assert.assertTrue(driver.getCurrentUrl().equals("https://viaporttrans.com/contact-us/"));
     }
 
     @Test(groups = {"Main"}, priority = 91)
     public void Case_0091_Other_Service_Pages() {
+        home.getHomePage().click();
         home.getReadmore4().click();
         Assert.assertTrue(driver.getCurrentUrl().equals("https://viaporttrans.com/storage-2/"));
 
@@ -213,6 +220,7 @@ public class TestHomePage extends BaseTest {
 
     @Test(groups = {"Main"}, priority = 92)
     public void Case_0092_Other_Service_Pages() {
+        home.getHomePage().click();
         home.getReadmore5().click();
         Assert.assertTrue(driver.getCurrentUrl().equals("https://viaporttrans.com/logistic-2/"));
 
@@ -220,24 +228,28 @@ public class TestHomePage extends BaseTest {
 
     @Test(groups = {"Main"}, priority = 93)
     public void Case_0093_Other_Service_Pages() {
+        home.getHomePage().click();
         home.getReadmore6().click();
         Assert.assertTrue(driver.getCurrentUrl().equals("https://viaporttrans.com/transport/"));
     }
 
     @Test(groups = {"Main"}, priority = 100)
     public void Case_100_ViewAllServices() {
+        home.getHomePage().click();
         home.getViewAllServices().click();
         Assert.assertTrue(driver.getCurrentUrl().equals("https://viaporttrans.com/transport/"));
     }
 
     @Test(groups = {"Main"}, priority = 110)
     public void Case_110_Third_Contact_Us_Button() {
+        home.getHomePage().click();
         home.getContactUs3().click();
         Assert.assertTrue(driver.getCurrentUrl().equals("https://viaporttrans.com/contact-us/"));
     }
 
     @Test(groups = {"Main"}, priority = 120)
     public void Case_120__RequestFreeQuoteButton() {
+        home.getHomePage().click();
         home.getRequestFreeQuote().click();
         Assert.assertTrue(driver.getCurrentUrl().equals("https://viaporttrans.com/contact-us/"));
     }
