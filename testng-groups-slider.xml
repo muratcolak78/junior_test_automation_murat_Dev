@@ -6,7 +6,7 @@
     <test name="Test 2"> <!--parallel="true" thread-count="5"-->
         <groups>
             <run>
-                <include name="slide"/>
+                <exclude name="Main"/>
             </run>
         </groups>
         <packages>

@@ -11,6 +11,7 @@
         </groups>
         <packages>
             <package name="org.cb.ta.test.ViaPort"/>
+
             <exclude name="exclude"/>
         </packages>
     </test>

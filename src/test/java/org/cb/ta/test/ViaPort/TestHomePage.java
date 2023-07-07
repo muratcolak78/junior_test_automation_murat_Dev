@@ -309,7 +309,7 @@ public class TestHomePage extends BaseTest {
         driver.get("https://viaporttrans.com/");
     }
 
-    @Test(groups = {"footer"}, priority = 150)
+    @Test(groups = {"test"}, priority = 150)
     public void Case_150_Footer_BTW() {
         home.getBTW().click();
         Assert.assertFalse(driver.getCurrentUrl().isEmpty());
@@ -317,7 +317,7 @@ public class TestHomePage extends BaseTest {
     }
 
 
-    @Test(groups = {"footer"}, priority = 170)
+    @Test(groups = {"test"}, priority = 170)
     public void Case_160_Footer_TranslateOptionsIsDisabled() throws InterruptedException {
         home.getTranslateOptions().click();
         Thread.sleep(2000);
