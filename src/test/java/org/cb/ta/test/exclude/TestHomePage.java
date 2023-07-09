@@ -1,4 +1,4 @@
-package org.cb.ta.test.ViaPort;
+package org.cb.ta.test.exclude;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -337,5 +337,6 @@ public class TestHomePage extends BaseTest {
         Assert.assertFalse(home.getHomePage().getText().equals("Anasayfa"));
 
     }
-
 }
+
+

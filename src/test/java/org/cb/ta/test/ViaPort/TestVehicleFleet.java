@@ -1,4 +1,4 @@
-package org.cb.ta.test.exclude;
+package org.cb.ta.test.ViaPort;
 
 import org.cb.ta.pages.HomePage;
 import org.cb.ta.pages.VehicleFleet;
@@ -19,10 +19,9 @@ public class TestVehicleFleet extends BaseTest {
     }
 
     @AfterMethod
-    public void aftermethod()  {
+    public void aftermethod() {
 
     }
-
 
 
     @AfterClass
@@ -108,6 +107,15 @@ public class TestVehicleFleet extends BaseTest {
         Assert.assertTrue(driver.getCurrentUrl().equals("https://viaporttrans.com/contact-us/"));
 
     }
+
+    @Test
+    public void googleMaps() {
+        vehicle.getGoogleMaps().isDisplayed();
+        System.out.println(vehicle.getGoogleMaps().getCssValue("border"));
+        System.out.println(vehicle.getGoogleMaps().getAttribute("allowfullscreen"));
+        Assert.assertTrue(vehicle.getGoogleMaps().isDisplayed());
+    }
+
 
     public void afterslide() {
         webDriverWait.until(ExpectedConditions.visibilityOf(vehicle.getClose()));

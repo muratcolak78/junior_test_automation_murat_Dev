@@ -9,8 +9,8 @@ import java.io.IOException;
 public class TestListener implements ITestListener {
 
     ReportManager report = new ReportManager();
-    FileWriterHtml writer = new FileWriterHtml("src/test/java/reports/rapor.html");
-    //FileWriterTxt writer=new FileWriterTxt("src/test/java/reports/rapor.txt");
+    //FileWriterHtml writer = new FileWriterHtml("src/test/java/reports/rapor.html");
+    FileWriterTxt writer=new FileWriterTxt("src/test/java/reports/rapor.txt");
     int nmbrTest = 0;
     int nmbrPassed = 0;
     int nmbrFailed = 0;

@@ -1,4 +1,12 @@
-org.cb.ta.test.ViaPort.TestHomePage
-1. Case_150_Footer_BTW Test case started: PASSED
-2. Case_160_Footer_TranslateOptionsIsDisabled Test case started: PASSED
-Total test run: 2 Passes: 2 Failure: 0 Skips: 0
+org.cb.ta.test.ViaPort.TestVehicleFleet
+1. Picture_Gallery_30 Test case started: PASSED
+2. Picture_Gallery_31 Test case started: PASSED
+3. Picture_Gallery_32 Test case started: PASSED
+4. Picture_Gallery_33 Test case started: PASSED
+5. Picture_Gallery_34 Test case started: PASSED
+6. Picture_Gallery_35 Test case started: PASSED
+7. Picture_Gallery_36 Test case started: PASSED
+8. Picture_Gallery_37 Test case started: PASSED
+9. getAQuete_40 Test case started: PASSED
+10. googleMaps Test case started: PASSED
+Total test run: 10 Passes: 10 Failure: 0 Skips: 0
