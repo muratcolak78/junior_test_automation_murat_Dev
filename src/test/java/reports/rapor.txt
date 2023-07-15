@@ -1,4 +1,4 @@
-org.cb.ta.test.ViaPort.TestVehicleFleet
+
 1. Picture_Gallery_30 Test case started: PASSED
 2. Picture_Gallery_31 Test case started: PASSED
 3. Picture_Gallery_32 Test case started: PASSED

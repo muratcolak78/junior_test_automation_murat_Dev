@@ -1,4 +1,4 @@
-package org.cb.ta.test.ViaPort;
+package org.cb.ta.test.exclude;
 
 import org.cb.ta.pages.HomePage;
 import org.cb.ta.pages.VehicleFleet;

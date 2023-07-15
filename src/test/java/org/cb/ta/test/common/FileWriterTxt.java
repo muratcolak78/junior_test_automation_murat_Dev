@@ -14,13 +14,7 @@ public class FileWriterTxt {
         writer=new FileWriter(path,false);
     }
     public void onStart(ITestResult result, int nmbrTest){
-        if(nmbrTest==1){
-            try {
-                writer.write(result.getTestClass().getName()+"\n");
-            } catch (IOException e) {
-                System.out.println(e.getMessage());;
-            }
-        }
+
         try {
             writer.write(nmbrTest+". "+result.getName() +" Test case started: ");
         } catch (IOException e) {
