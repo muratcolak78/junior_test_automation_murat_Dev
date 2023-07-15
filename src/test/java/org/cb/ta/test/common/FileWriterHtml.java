@@ -4,18 +4,23 @@ import org.testng.ITestResult;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.Month;
+import java.time.Year;
 
 public class FileWriterHtml {
 
     FileWriter writer;
+    java.util.Date date;
 
     public FileWriterHtml(String path) throws IOException {
 
-        writer=new FileWriter(path,false);
+        writer = new FileWriter(path, false);
     }
 
-    public void onStart(ITestResult result, int nmbrTest){
-          if(nmbrTest==1){
+    public void onStart(ITestResult result, int nmbrTest) {
+        date = new java.util.Date();
+        if (nmbrTest == 1) {
             try {
                 writer.write("<!DOCTYPE html>\n" +
                         "<html lang=\"en-US\">\n" +
@@ -40,41 +45,48 @@ public class FileWriterHtml {
                         "</head>\n" +
                         "<body>");
             } catch (IOException e) {
-                System.out.println(e.getMessage());;
+                System.out.println(e.getMessage());
+                ;
             }
         }
         try {
-            writer.write("<h2>"+nmbrTest+". "+result.getName() +" Test case started: </h2>\n");
+            writer.write("<h2>" + nmbrTest + ". " + date + "- " + result.getName() + " Test case started: </h2>\n");
         } catch (IOException e) {
-            System.out.println(e.getMessage());;
+            System.out.println(e.getMessage());
+            ;
         }
     }
 
-    public void passed(){
+    public void passed() {
         try {
             writer.write("<h2 style=\"color:green\";>PASSED</h2>\n");
         } catch (IOException e) {
-            System.out.println(e.getMessage());;
-        }
-    }
-    public void failed(){
-        try {
-            writer.write("<h2 style=\"color:red\";>FAILED</h2>\n");
-        } catch (IOException e) {
-            System.out.println(e.getMessage());;
+            System.out.println(e.getMessage());
+            ;
         }
     }
 
-    public void skipped(){
+    public void failed() {
+        try {
+            writer.write("<h2 style=\"color:red\";>FAILED</h2>\n");
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+            ;
+        }
+    }
+
+    public void skipped() {
         try {
             writer.write("<h2 style=\"color:yellow\";>SKIPPED</h2>\n");
         } catch (IOException e) {
-            System.out.println(e.getMessage());;
+            System.out.println(e.getMessage());
+            ;
         }
     }
-    public void closed(int nmbrTest, int nmbrPassed, int nmbrFailed,int nmbrSkipped){
+
+    public void closed(int nmbrTest, int nmbrPassed, int nmbrFailed, int nmbrSkipped) {
         try {
-            writer.write("<h2 style=\" color:blue\";>Total test run: "+nmbrTest+" Passes: "+nmbrPassed+" Failure: "+nmbrFailed+" Skips: "+nmbrSkipped+"</h2>\n</body>\n</html>");
+            writer.write("<h2 style=\" color:blue\";>Total test run: " + nmbrTest + " Passes: " + nmbrPassed + " Failure: " + nmbrFailed + " Skips: " + nmbrSkipped + "</h2>\n</body>\n</html>");
             writer.close();
         } catch (IOException e) {
             throw new RuntimeException(e);

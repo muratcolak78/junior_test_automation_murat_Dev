@@ -1,4 +1,4 @@
-package org.cb.ta.test.ViaPort;
+package org.cb.ta.test.exclude;
 
 import org.cb.ta.pages.AboutUs;
 import org.cb.ta.pages.ContactUs;
@@ -32,13 +32,13 @@ public class TestContactUs extends BaseTest {
     @Test(groups = {"Main"}, priority = 20)
     public void fillForm2()throws InterruptedException {
         contact.getName().click();
-        action.sendKeys("mustafa")
+        action.sendKeys("name")
                 .sendKeys(Keys.TAB)
-                .sendKeys("Tester")
+                .sendKeys("subject")
                 .sendKeys(Keys.TAB)
                 .sendKeys("abcde@gmail.com")
                 .sendKeys(Keys.TAB)
-                .sendKeys("asdasdasd")
+                .sendKeys("message")
                 .sendKeys(Keys.TAB)
                 .sendKeys(Keys.ENTER)
                 .build().perform();
